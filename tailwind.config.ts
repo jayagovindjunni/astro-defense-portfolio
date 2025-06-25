@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,13 +62,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Tech theme colors
-				'tech-dark': '#0a0a0a',
-				'tech-darker': '#050505',
-				'tech-green': '#00ff88',
-				'tech-green-dark': '#00cc6a',
-				'tech-gray': '#1a1a1a',
-				'tech-gray-light': '#2a2a2a',
+				// Jarvis blue theme colors
+				'jarvis-dark': '#030712',
+				'jarvis-darker': '#0f172a',
+				'jarvis-navy': '#0a1628',
+				'jarvis-blue': '#00bfff',
+				'jarvis-blue-light': '#1e90ff',
+				'jarvis-blue-dark': '#0096cc',
+				'jarvis-gray': '#1e293b',
+				'jarvis-gray-light': '#334155',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -113,20 +114,34 @@ export default {
 						transform: 'translateX(0)'
 					}
 				},
-				'glow-pulse': {
+				'jarvis-glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)'
+						boxShadow: '0 0 20px rgba(0, 191, 255, 0.4), 0 0 40px rgba(0, 191, 255, 0.1)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(0, 255, 136, 0.6)'
+						boxShadow: '0 0 30px rgba(0, 191, 255, 0.8), 0 0 60px rgba(0, 191, 255, 0.3)'
 					}
 				},
 				'tech-grid': {
 					'0%': {
-						transform: 'translateY(0)'
+						transform: 'translateY(0) translateX(0)'
 					},
 					'100%': {
-						transform: 'translateY(-20px)'
+						transform: 'translateY(-20px) translateX(-10px)'
+					}
+				},
+				'jarvis-float': {
+					'0%': {
+						transform: 'translateY(0px) translateX(0px)'
+					},
+					'33%': {
+						transform: 'translateY(-10px) translateX(5px)'
+					},
+					'66%': {
+						transform: 'translateY(5px) translateX(-5px)'
+					},
+					'100%': {
+						transform: 'translateY(-5px) translateX(10px)'
 					}
 				}
 			},
@@ -135,8 +150,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'jarvis-glow-pulse': 'jarvis-glow-pulse 3s ease-in-out infinite',
 				'tech-grid': 'tech-grid 20s ease-in-out infinite alternate',
+				'jarvis-float': 'jarvis-float 30s ease-in-out infinite alternate',
 			},
 			fontFamily: {
 				'tech': ['Orbitron', 'monospace'],
