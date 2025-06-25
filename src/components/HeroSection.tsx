@@ -13,12 +13,12 @@ const HeroSection = () => {
           </h1>
           
           <p className="font-mono text-xl md:text-2xl text-gray-300 mb-8 animate-slide-in-left">
-            Tech Enthusiast & Future Defense-Tech Innovator
+            Tech Enthusiast &amp; Future Defense-Tech Innovator
           </p>
           
           <div className="inline-block p-4 glass-effect rounded-lg animate-glow-pulse">
             <p className="font-mono text-tech-green text-sm md:text-base">
-              > Developing next-gen defense solutions through Project SENTINEL
+              &gt; Developing next-gen defense solutions through Project SENTINEL
             </p>
           </div>
           
