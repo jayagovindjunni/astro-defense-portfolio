@@ -119,4 +119,60 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 255, 136, 0.2);
   }
+
+  /* Jarvis-inspired skill cards */
+  .jarvis-card {
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    backdrop-filter: blur(5px);
+    animation: jarvis-appear 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .jarvis-card:hover {
+    border-color: rgba(0, 255, 136, 0.8);
+    box-shadow: 
+      0 0 20px rgba(0, 255, 136, 0.3),
+      inset 0 0 20px rgba(0, 255, 136, 0.05);
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(10, 10, 10, 0.9);
+  }
+
+  .jarvis-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      rgba(0, 255, 136, 0.1), 
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+
+  .jarvis-card:hover::before {
+    left: 100%;
+  }
+
+  /* Jarvis appear animation */
+  @keyframes jarvis-appear {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }

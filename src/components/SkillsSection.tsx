@@ -1,43 +1,55 @@
 
 const SkillsSection = () => {
   const skills = [
-    { name: 'AI/ML', level: 90, icon: '🤖' },
-    { name: 'Robotics', level: 85, icon: '🦾' },
-    { name: 'OSINT', level: 88, icon: '🔍' },
-    { name: 'Cybersecurity', level: 82, icon: '🛡️' },
-    { name: 'Electronics', level: 87, icon: '⚡' },
-    { name: 'Python', level: 93, icon: '🐍' },
+    'AI/ML & Deep Learning',
+    'Robotics & Automation',
+    'Cybersecurity',
+    'OSINT & Intelligence Analysis',
+    'Electronics & Circuit Design',
+    'Python, C++ Development',
+    'Satellite Technology',
+    'Patriotism & National Service',
+    'Leadership & Teamwork'
   ];
 
   return (
-    <section id="skills" className="py-20 bg-tech-darker">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-tech text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="text-white">Technical</span>
-            <span className="text-tech-green glow-text"> Skills</span>
+    <section id="skills" className="py-20 bg-tech-darker relative overflow-hidden">
+      {/* Jarvis-like background grid */}
+      <div className="absolute inset-0 tech-grid-bg opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-tech-green/5 to-transparent"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-tech text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-white">Skills &amp; Interests</span>
+            <span className="text-tech-green glow-text"> We Value</span>
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <p className="font-mono text-lg text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            We are looking for patriotic, passionate people who share our vision of protecting the nation with technology and innovation.
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
-              <div key={skill.name} className="glass-effect p-6 rounded-lg hover:border-tech-green transition-all duration-300 group">
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-4">{skill.icon}</span>
-                  <h3 className="font-tech text-xl text-white group-hover:text-tech-green transition-colors">
-                    {skill.name}
+              <div 
+                key={skill} 
+                className="jarvis-card group cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative p-6 h-full flex items-center justify-center">
+                  {/* Jarvis-like corner brackets */}
+                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-tech-green opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-tech-green opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-tech-green opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-tech-green opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                  
+                  {/* Skill text */}
+                  <h3 className="font-mono text-sm md:text-base text-center text-gray-300 group-hover:text-tech-green transition-all duration-300 font-medium">
+                    {skill}
                   </h3>
-                </div>
-                
-                <div className="relative">
-                  <div className="w-full bg-tech-gray h-2 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-tech-green to-tech-green-dark rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                  <span className="absolute -top-8 right-0 font-mono text-tech-green text-sm">
-                    {skill.level}%
-                  </span>
+                  
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 bg-tech-green opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-lg"></div>
                 </div>
               </div>
             ))}
