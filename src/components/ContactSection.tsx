@@ -15,13 +15,13 @@ const ContactSection = () => {
           
           <div className="glass-effect p-8 rounded-lg mb-12 jarvis-glow-border">
             <p className="font-mono text-gray-300 text-lg mb-8 leading-relaxed">
-              Ready to collaborate on the next breakthrough in defense technology? 
-              Let's connect and build the future of soldier safety together.
+              I'm always open to connecting with like-minded innovators and patriots. 
+              Let's build the future together.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a 
-                href="mailto:jayagovind@example.com"
+                href="mailto:jayagovind702@gmail.com"
                 className="flex items-center space-x-3 px-6 py-3 bg-jarvis-blue text-jarvis-darker font-mono font-semibold rounded-lg hover:bg-jarvis-blue-light transition-all duration-300 transform hover:scale-105 jarvis-glow-border"
               >
                 <Mail size={20} />
