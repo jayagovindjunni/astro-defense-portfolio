@@ -3,9 +3,7 @@ import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
-import EnhancedProjectsSection from '../components/EnhancedProjectsSection';
-import BlogSection from '../components/BlogSection';
-import TestimonialsSection from '../components/TestimonialsSection';
+import ProjectsSection from '../components/ProjectsSection';
 import EnhancedContactSection from '../components/EnhancedContactSection';
 import NewsletterSection from '../components/NewsletterSection';
 import ThemeToggle from '../components/ThemeToggle';
@@ -23,9 +21,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <EnhancedProjectsSection />
-      <BlogSection />
-      <TestimonialsSection />
+      <ProjectsSection />
       <NewsletterSection />
       <EnhancedContactSection />
     </div>
