@@ -1,5 +1,14 @@
 
+import TypingAnimation from './TypingAnimation';
+
 const HeroSection = () => {
+  const typingTexts = [
+    "Tech Enthusiast & Future Defense-Tech Innovator",
+    "AI/ML & Robotics Specialist",
+    "Cybersecurity & OSINT Expert",
+    "Electronics & Circuit Designer"
+  ];
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-jarvis-darker">
       <div className="absolute inset-0 jarvis-grid-bg opacity-40"></div>
@@ -12,26 +21,29 @@ const HeroSection = () => {
             <span className="text-jarvis-blue glow-text">J Unni</span>
           </h1>
           
-          <p className="font-mono text-xl md:text-2xl text-gray-300 mb-8 animate-slide-in-left">
-            Tech Enthusiast &amp; Future Defense-Tech Innovator
-          </p>
+          <div className="h-16 mb-8">
+            <TypingAnimation 
+              texts={typingTexts}
+              className="font-mono text-xl md:text-2xl text-gray-300"
+            />
+          </div>
           
-          <div className="inline-block p-4 glass-effect rounded-lg animate-jarvis-glow-pulse jarvis-glow-border">
+          <div className="inline-block p-4 glass-effect rounded-lg animate-jarvis-glow-pulse jarvis-glow-border mb-12">
             <p className="font-mono text-jarvis-blue text-sm md:text-base">
               &gt; Developing next-gen defense solutions through Project SENTINEL
             </p>
           </div>
           
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-jarvis-blue text-jarvis-darker font-mono font-semibold rounded-lg hover:bg-jarvis-blue-light transition-all duration-300 transform hover:scale-105 jarvis-glow-border"
+              className="px-8 py-3 bg-jarvis-blue text-jarvis-darker font-mono font-semibold rounded-lg hover:bg-jarvis-blue-light transition-all duration-300 transform hover:scale-105 jarvis-glow-border hover:shadow-lg hover:shadow-jarvis-blue/25"
             >
               View Projects
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border-2 border-jarvis-blue text-jarvis-blue font-mono font-semibold rounded-lg hover:bg-jarvis-blue hover:text-jarvis-darker transition-all duration-300 jarvis-glow-border"
+              className="px-8 py-3 border-2 border-jarvis-blue text-jarvis-blue font-mono font-semibold rounded-lg hover:bg-jarvis-blue hover:text-jarvis-darker transition-all duration-300 jarvis-glow-border hover:shadow-lg hover:shadow-jarvis-blue/25"
             >
               Get In Touch
             </button>
